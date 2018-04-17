@@ -1,0 +1,56 @@
+---
+options:
+  attemps: 3
+  difficulty: 5
+  cursor: half
+  case_insensitive: true
+
+  option_token: "/"
+  set_token: "="
+  dict_token: ":"
+
+  users:
+  - name: ADMIN
+    pass: "<ADMINPASS>"
+
+fo3:
+  reset: "SECURITY RESET..."
+  welcome: "WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK"
+  model_name: "RIT-V300"
+  enter_pwd: "ENTER PASSWORD NOW"
+  attempts: "{} ATTEMPT(S) LEFT: {}"
+  junk: "!@#$%^&*'-=_\\/|,.;:"
+  groups: "()[]{}<>"
+  dud: "Dud removed."
+  prompt: "> "
+  allowance: "Allowance\nreplenished."
+  success: "Please wait\nwhile system\nis accessed."
+  pwd_hide: "*"
+  syntax_error: "SYNTAX ERROR: {}"
+  bad_option: "UNEXPECTED OPTION: {}"
+  bad_argument: "UNEXPECTED ARGUMENT: {}"
+  terminal_bad_options: "TERMINAL: MISSING OPTIONS"
+  login_pass: "LOGGED IN"
+  login_fail: "INCORRECT LOGIN"
+  login_missing_name: "USERNAME REQUIRED"
+  halt: "HALTED"
+  restart: "RESTARTING"
+
+  tests:
+  - ["S", "SYNTAX ERROR: S"]
+  - ["SET", ""]
+  - ["SET TERM", "UNEXPECTED ARGUMENT: TERM"]
+  - ["SET TERMINAL", "TERMINAL: MISSING OPTIONS"]
+  - ["SET TERMINAL/INQUIRE", "RIT-V300"]
+  - ["SET TERMINAL /INQUIRE", "RIT-V300"]
+  - ["SET TERMINAL/WHATEVS", "UNEXPECTED OPTION: WHATEVS"]
+  - ["SET FILE/PROTECTION", ""]
+  - ["SET FILE/PROTECTION=OWNER:RWED ACCOUNTS.F", ""]
+  - ["SET FILE/INQUIRE", "finq"]
+  - ["SET HALT", ""]
+  - ["SET HALT RESTART", ""]
+  - ["SET HALT RESTART/MAINT", ""]
+  - ["LOGIN", ""]
+  - ["LOGIN GUEST", ""]
+  - ["LOGIN ADMIN", ""]
+  
